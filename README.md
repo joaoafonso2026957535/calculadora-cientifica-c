@@ -45,4 +45,47 @@ Desenvolver uma calculadora científica em linguagem C utilizando conceitos estu
     // Exibição das operações armazenadas durante a execução do sistema.
 
     └── Tratamento de erros (if/else)
+
+
+
+## Fluxo de Utilização
+
+```text
+INÍCIO
+
+↓
+MENU PRINCIPAL
+
+↓
+Escolha da Operação
+
+↓
+SWITCH CASE
+
+↓
+Execução da Função Selecionada
+
+↓
+Validação de Dados (if/else)
+
+↓
+Cálculo
+
+↓
+Exibição do Resultado
+
+↓
+Registro no Histórico
+
+↓
+Retorno ao Menu Principal
+
+↓
+Opção 0
+
+↓
+ENCERRAMENTO DO SISTEMA
+```
+    
     // Validação de entradas e prevenção de operações inválidas.
+
