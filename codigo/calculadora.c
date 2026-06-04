@@ -297,6 +297,156 @@ if(num2 == 0)
     return;
 }
 
+void potencia()
+{
+    float base;
+    float expoente;
+    float resultado;
+
+    printf("\n=== POTENCIA ===\n");
+
+    printf("Digite a base: ");
+
+    if(scanf("%f", &base) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    printf("Digite o expoente: ");
+
+    if(scanf("%f", &expoente) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    resultado = pow(base, expoente);
+
+    printf("\nResultado: %.2f\n", resultado);
+}
+
+void raizQuadrada()
+{
+    float numero;
+    float resultado;
+
+    printf("\n=== RAIZ QUADRADA ===\n");
+
+    printf("Digite um numero: ");
+
+    if(scanf("%f", &numero) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    if(numero < 0)
+    {
+        printf("\nErro! Nao existe raiz quadrada real de numero negativo.\n");
+        return;
+    }
+
+    resultado = sqrt(numero);
+
+    printf("\nResultado: %.2f\n", resultado);
+}
+
+void seno()
+{
+    float angulo;
+    float resultado;
+
+    printf("\n=== SENO ===\n");
+
+    printf("Digite o angulo em graus: ");
+
+    if(scanf("%f", &angulo) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    resultado = sin(angulo * M_PI / 180);
+
+    printf("\nResultado: %.4f\n", resultado);
+}
+
+void cosseno()
+{
+    float angulo;
+    float resultado;
+
+    printf("\n=== COSSENO ===\n");
+
+    printf("Digite o angulo em graus: ");
+
+    if(scanf("%f", &angulo) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    resultado = cos(angulo * M_PI / 180);
+
+    printf("\nResultado: %.4f\n", resultado);
+}
+
+void tangente()
+{
+    float angulo;
+    float resultado;
+
+    printf("\n=== TANGENTE ===\n");
+
+    printf("Digite o angulo em graus: ");
+
+    if(scanf("%f", &angulo) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    resultado = tan(angulo * M_PI / 180);
+
+    printf("\nResultado: %.4f\n", resultado);
+}
+
+void mostrarHistorico()
+{
+    printf("\n=== HISTORICO ===\n");
+
+    if(totalHistorico == 0)
+    {
+        printf("Nenhuma operacao registrada.\n");
+        return;
+    }
+
+    for(int i = 0; i < totalHistorico; i++)
+    {
+        printf("%d. %s\n", i + 1, historico[i].descricao);
+    }
+}
+
+
 resultado = num1 / num2;
 
 printf("\nResultado: %.2f\n", resultado);
