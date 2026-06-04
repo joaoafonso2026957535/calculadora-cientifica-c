@@ -7,7 +7,6 @@ Calculadora Científica em C
 Autor: João Afonso
 =========================================
 */
-
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -106,43 +105,43 @@ int main()
     switch(opcao)
     {
         case 1:
-            printf("\nFuncao Soma sera executada.\n");
+            soma();
             break;
 
         case 2:
-            printf("\nFuncao Subtracao sera executada.\n");
+            subtracao();
             break;
 
         case 3:
-            printf("\nFuncao Multiplicacao sera executada.\n");
+            multiplicacao();
             break;
 
         case 4:
-            printf("\nFuncao Divisao sera executada.\n");
+         divisao();
             break;
 
         case 5:
-            printf("\nFuncao Potencia sera executada.\n");
+            potencia();
             break;
 
         case 6:
-            printf("\nFuncao Raiz Quadrada sera executada.\n");
+            raizQuadrada();
             break;
 
         case 7:
-            printf("\nFuncao Seno sera executada.\n");
+            seno();
             break;
 
         case 8:
-            printf("\nFuncao Cosseno sera executada.\n");
+            cosseno();
             break;
 
         case 9:
-            printf("\nFuncao Tangente sera executada.\n");
+            tangente();
             break;
 
         case 10:
-            printf("\nHistorico sera exibido.\n");
+            mostrarHistorico();
             break;
 
         case 0:
@@ -158,3 +157,148 @@ int main()
 
     return 0;
 }
+void soma()
+{
+    float num1;
+    float num2;
+    float resultado;
+
+    printf("\n=== SOMA ===\n");
+
+    printf("Digite o primeiro numero: ");
+
+    if(scanf("%f", &num1) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    printf("Digite o segundo numero: ");
+
+    if(scanf("%f", &num2) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    resultado = num1 + num2;
+
+    printf("\nResultado: %.2f\n", resultado);
+}
+
+void subtracao()
+{
+    float num1;
+    float num2;
+    float resultado;
+
+    printf("\n=== SUBTRACAO ===\n");
+
+    printf("Digite o primeiro numero: ");
+
+    if(scanf("%f", &num1) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    printf("Digite o segundo numero: ");
+
+    if(scanf("%f", &num2) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    resultado = num1 - num2;
+
+    printf("\nResultado: %.2f\n", resultado);
+}
+
+void multiplicacao()
+{
+    float num1;
+    float num2;
+    float resultado;
+
+    printf("\n=== MULTIPLICACAO ===\n");
+
+    printf("Digite o primeiro numero: ");
+
+    if(scanf("%f", &num1) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+    printf("Digite o segundo numero: ");
+
+    if(scanf("%f", &num2) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+  resultado = num1 * num2;
+
+    printf("\nResultado: %.2f\n", resultado);
+}
+
+    void divisao()
+{
+    float num1;
+    float num2;
+    float resultado;
+
+    printf("\n=== DIVISAO ===\n");
+
+    printf("Digite o primeiro numero: ");
+
+    if(scanf("%f", &num1) != 1)
+    {
+        printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+        while(getchar() != '\n');
+
+        return;
+    }
+
+   printf("Digite o segundo numero: ");
+
+if(scanf("%f", &num2) != 1)
+{
+    printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+    while(getchar() != '\n');
+
+    return;
+}
+
+if(num2 == 0)
+{
+    printf("\nErro! Divisao por zero nao e permitida.\n");
+    return;
+}
+
+resultado = num1 / num2;
+
+printf("\nResultado: %.2f\n", resultado);
+}
+
