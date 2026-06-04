@@ -87,7 +87,72 @@ int main()
         printf("\n0 - Sair\n");
 
         printf("\nEscolha uma opcao: ");
-        scanf("%d", &opcao);
+
+ /* Verifica se o usuário digitou um número */
+        if(scanf("%d", &opcao) != 1)
+        {
+            printf("\nEntrada invalida! Digite apenas numeros.\n");
+
+            /* Limpa o buffer do teclado */
+            while(getchar() != '\n');
+
+            /* Define uma opção inválida para continuar o programa */
+            opcao = -1;
+        }
+        else
+        {
+            
+            
+    switch(opcao)
+    {
+        case 1:
+            printf("\nFuncao Soma sera executada.\n");
+            break;
+
+        case 2:
+            printf("\nFuncao Subtracao sera executada.\n");
+            break;
+
+        case 3:
+            printf("\nFuncao Multiplicacao sera executada.\n");
+            break;
+
+        case 4:
+            printf("\nFuncao Divisao sera executada.\n");
+            break;
+
+        case 5:
+            printf("\nFuncao Potencia sera executada.\n");
+            break;
+
+        case 6:
+            printf("\nFuncao Raiz Quadrada sera executada.\n");
+            break;
+
+        case 7:
+            printf("\nFuncao Seno sera executada.\n");
+            break;
+
+        case 8:
+            printf("\nFuncao Cosseno sera executada.\n");
+            break;
+
+        case 9:
+            printf("\nFuncao Tangente sera executada.\n");
+            break;
+
+        case 10:
+            printf("\nHistorico sera exibido.\n");
+            break;
+
+        case 0:
+            printf("\nEncerrando o sistema...\n");
+            break;
+
+        default:
+            printf("\nOpcao invalida! Escolha uma opcao entre 0 e 10.\n");
+    }
+}
 
     } while(opcao != 0);
 
