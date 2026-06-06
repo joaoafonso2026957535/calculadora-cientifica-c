@@ -190,6 +190,19 @@ void soma()
     resultado = num1 + num2;
 
     printf("\nResultado: %.2f\n", resultado);
+
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Soma: %.2f + %.2f = %.2f",
+        num1,
+        num2,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
 void subtracao()
@@ -225,7 +238,21 @@ void subtracao()
     resultado = num1 - num2;
 
     printf("\nResultado: %.2f\n", resultado);
+
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Subtracao: %.2f - %.2f = %.2f",
+        num1,
+        num2,
+        resultado
+    );
+
+    totalHistorico++;
 }
+}
+
 
 void multiplicacao()
 {
@@ -259,9 +286,22 @@ void multiplicacao()
   resultado = num1 * num2;
 
     printf("\nResultado: %.2f\n", resultado);
+
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Multiplicacao: %.2f * %.2f = %.2f",
+        num1,
+        num2,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
-    void divisao()
+void divisao()
 {
     float num1;
     float num2;
@@ -295,6 +335,23 @@ if(num2 == 0)
 {
     printf("\nErro! Divisao por zero nao e permitida.\n");
     return;
+}
+    resultado = num1 / num2;
+
+printf("\nResultado: %.2f\n", resultado);
+
+if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Divisao: %.2f / %.2f = %.2f",
+        num1,
+        num2,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
 void potencia()
@@ -330,6 +387,18 @@ void potencia()
     resultado = pow(base, expoente);
 
     printf("\nResultado: %.2f\n", resultado);
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Potencia: %.2f ^ %.2f = %.2f",
+        base,
+        expoente,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
 void raizQuadrada()
@@ -359,6 +428,17 @@ void raizQuadrada()
     resultado = sqrt(numero);
 
     printf("\nResultado: %.2f\n", resultado);
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Raiz Quadrada: raiz(%.2f) = %.2f",
+        numero,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
 void seno()
@@ -382,6 +462,17 @@ void seno()
     resultado = sin(angulo * M_PI / 180);
 
     printf("\nResultado: %.4f\n", resultado);
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Seno: sen(%.2f) = %.4f",
+        angulo,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
 void cosseno()
@@ -405,6 +496,17 @@ void cosseno()
     resultado = cos(angulo * M_PI / 180);
 
     printf("\nResultado: %.4f\n", resultado);
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Cosseno: cos(%.2f) = %.4f",
+        angulo,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
 void tangente()
@@ -428,27 +530,34 @@ void tangente()
     resultado = tan(angulo * M_PI / 180);
 
     printf("\nResultado: %.4f\n", resultado);
+    if(totalHistorico < 100)
+{
+    sprintf(
+        historico[totalHistorico].descricao,
+        "Tangente: tan(%.2f) = %.4f",
+        angulo,
+        resultado
+    );
+
+    totalHistorico++;
+}
 }
 
 void mostrarHistorico()
 {
-    printf("\n=== HISTORICO ===\n");
+    int i;
+
+    printf("\n=== HISTORICO DE OPERACOES ===\n");
 
     if(totalHistorico == 0)
     {
-        printf("Nenhuma operacao registrada.\n");
+        printf("Nenhuma operacao realizada.\n");
         return;
     }
 
-    for(int i = 0; i < totalHistorico; i++)
+    for(i = 0; i < totalHistorico; i++)
     {
-        printf("%d. %s\n", i + 1, historico[i].descricao);
+        printf("%d - %s\n", i + 1, historico[i].descricao);
     }
-}
-
-
-resultado = num1 / num2;
-
-printf("\nResultado: %.2f\n", resultado);
 }
 
