@@ -38,18 +38,31 @@ PROTÓTIPOS DAS FUNÇÕES
 =========================================
 */
 
+//menus
+void menuBasico();  
+void menuCientifico(); 
+
+//operações basicas
 void soma();
 void subtracao();
 void multiplicacao();
 void divisao();
 
+//operações cientificas
 void potencia();
 void raizQuadrada();
 void seno();
 void cosseno();
 void tangente();
 
+//recursos
 void mostrarHistorico();
+
+/* Funcionalidades em desenvolvimento */
+void expressoesComplexas();
+void logaritmo();
+void fatorial();
+void exponencial();
 
 /*
 =========================================
@@ -67,23 +80,10 @@ int main()
         printf("     CALCULADORA CIENTIFICA\n");
         printf("=================================\n");
 
-        printf("\nOPERACOES BASICAS\n");
-        printf("1 - Soma\n");
-        printf("2 - Subtracao\n");
-        printf("3 - Multiplicacao\n");
-        printf("4 - Divisao\n");
-
-        printf("\nOPERACOES CIENTIFICAS\n");
-        printf("5 - Potencia\n");
-        printf("6 - Raiz Quadrada\n");
-        printf("7 - Seno\n");
-        printf("8 - Cosseno\n");
-        printf("9 - Tangente\n");
-
-        printf("\nRECURSOS\n");
-        printf("10 - Historico\n");
-
-        printf("\n0 - Sair\n");
+       printf("\n1 - Operacoes Basicas\n");
+       printf("\n2 - Operacoes Cientificas\n");
+       printf("\n3 - Historico\n");
+       printf("\n0 - Sair\n");
 
         printf("\nEscolha uma opcao: ");
 
@@ -105,58 +105,93 @@ int main()
     switch(opcao)
     {
         case 1:
-            soma();
-            break;
+    menuBasico();
+    break;
 
-        case 2:
-            subtracao();
-            break;
+case 2:
+    menuCientifico();
+    break;
 
-        case 3:
-            multiplicacao();
-            break;
-
-        case 4:
-         divisao();
-            break;
-
-        case 5:
-            potencia();
-            break;
-
-        case 6:
-            raizQuadrada();
-            break;
-
-        case 7:
-            seno();
-            break;
-
-        case 8:
-            cosseno();
-            break;
-
-        case 9:
-            tangente();
-            break;
-
-        case 10:
-            mostrarHistorico();
-            break;
+case 3:
+    mostrarHistorico();
+    break;
 
         case 0:
             printf("\nEncerrando o sistema...\n");
             break;
 
         default:
-            printf("\nOpcao invalida! Escolha uma opcao entre 0 e 10.\n");
+            printf("\nOpcao invalida! Escolha uma opcao entre 0 e 3.\n");
     }
-}
+} 
 
     } while(opcao != 0);
 
     return 0;
 }
+void menuBasico()
+{
+    int opcao;
+
+    do
+    {
+        printf("\n============================\n");
+        printf("   OPERACOES BASICAS\n");
+        printf("============================\n");
+
+        printf("1 - Adicao\n");
+        printf("2 - Subtracao\n");
+        printf("3 - Multiplicacao\n");
+        printf("4 - Divisao\n");
+        printf("5 - Expressoes Complexas\n");
+        printf("0 - Voltar\n");
+
+        printf("\nEscolha uma opcao: ");
+
+        if(scanf("%d", &opcao) != 1)
+        {
+            printf("\nEntrada invalida!\n");
+
+            while(getchar() != '\n');
+
+            opcao = -1;
+        }
+        else
+        {
+            switch(opcao)
+            {
+                case 1:
+                    soma();
+                    break;
+
+                case 2:
+                    subtracao();
+                    break;
+
+                case 3:
+                    multiplicacao();
+                    break;
+
+                case 4:
+                    divisao();
+                    break;
+
+                case 5:
+                    expressoesComplexas();
+                    break;
+
+                case 0:
+                    break;
+
+                default:
+                    printf("\nOpcao invalida!\n");
+            }
+        }
+
+    } while(opcao != 0);
+}
+
+
 void soma()
 {
     double num1;
@@ -354,6 +389,89 @@ if(totalHistorico < 100)
 }
 }
 
+void expressoesComplexas()
+{
+    printf("\nFuncionalidade em desenvolvimento.\n");
+}
+
+
+void menuCientifico()
+{
+    int opcao;
+
+    do
+    {
+        printf("\n============================\n");
+        printf(" OPERACOES CIENTIFICAS\n");
+        printf("============================\n");
+
+        printf("1 - Potencia\n");
+        printf("2 - Raiz Quadrada\n");
+        printf("3 - Seno\n");
+        printf("4 - Cosseno\n");
+        printf("5 - Tangente\n");
+        printf("6 - Logaritmo\n");
+        printf("7 - Fatorial\n");
+        printf("8 - Exponencial\n");
+        printf("0 - Voltar\n");
+
+        printf("\nEscolha uma opcao: ");
+
+        if(scanf("%d", &opcao) != 1)
+        {
+            printf("\nEntrada invalida!\n");
+
+            while(getchar() != '\n');
+
+            opcao = -1;
+        }
+        else
+        {
+            switch(opcao)
+            {
+                case 1:
+                    potencia();
+                    break;
+
+                case 2:
+                    raizQuadrada();
+                    break;
+
+                case 3:
+                    seno();
+                    break;
+
+                case 4:
+                    cosseno();
+                    break;
+
+                case 5:
+                    tangente();
+                    break;
+
+                case 6:
+                    logaritmo();
+                    break;
+
+                case 7:
+                    fatorial();
+                    break;
+
+                case 8:
+                    exponencial();
+                    break;
+
+                case 0:
+                    break;
+
+                default:
+                    printf("\nOpcao invalida!\n");
+            }
+        }
+
+    } while(opcao != 0);
+}
+
 void potencia()
 {
     double base;
@@ -541,6 +659,21 @@ void tangente()
 
     totalHistorico++;
 }
+}
+
+void logaritmo()
+{
+    printf("\nFuncionalidade em desenvolvimento.\n");
+}
+
+void fatorial()
+{
+    printf("\nFuncionalidade em desenvolvimento.\n");
+}
+
+void exponencial()
+{
+    printf("\nFuncionalidade em desenvolvimento.\n");
 }
 
 void mostrarHistorico()
