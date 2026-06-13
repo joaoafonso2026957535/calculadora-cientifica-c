@@ -159,15 +159,15 @@ int main()
 }
 void soma()
 {
-    float num1;
-    float num2;
-    float resultado;
+    double num1;
+    double num2;
+    double resultado;
 
     printf("\n=== SOMA ===\n");
 
     printf("Digite o primeiro numero: ");
 
-    if(scanf("%f", &num1) != 1)
+    if(scanf("%lf", &num1) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -178,7 +178,7 @@ void soma()
 
     printf("Digite o segundo numero: ");
 
-    if(scanf("%f", &num2) != 1)
+    if(scanf("%lf", &num2) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -189,13 +189,13 @@ void soma()
 
     resultado = num1 + num2;
 
-    printf("\nResultado: %.2f\n", resultado);
+    printf("\nResultado: %.2lf\n", resultado);
 
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Soma: %.2f + %.2f = %.2f",
+        "Soma: %.2lf + %.2lf = %.2lf",
         num1,
         num2,
         resultado
@@ -207,15 +207,15 @@ void soma()
 
 void subtracao()
 {
-    float num1;
-    float num2;
-    float resultado;
+    double num1;
+    double num2;
+    double resultado;
 
     printf("\n=== SUBTRACAO ===\n");
 
     printf("Digite o primeiro numero: ");
 
-    if(scanf("%f", &num1) != 1)
+    if(scanf("%lf", &num1) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -226,7 +226,7 @@ void subtracao()
 
     printf("Digite o segundo numero: ");
 
-    if(scanf("%f", &num2) != 1)
+    if(scanf("%lf", &num2) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -237,13 +237,13 @@ void subtracao()
 
     resultado = num1 - num2;
 
-    printf("\nResultado: %.2f\n", resultado);
+    printf("\nResultado: %.2lf\n", resultado);
 
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Subtracao: %.2f - %.2f = %.2f",
+        "Subtracao: %.2lf - %.2lf = %.2lf",
         num1,
         num2,
         resultado
@@ -256,15 +256,15 @@ void subtracao()
 
 void multiplicacao()
 {
-    float num1;
-    float num2;
-    float resultado;
+    double num1;
+    double num2;
+    double resultado;
 
     printf("\n=== MULTIPLICACAO ===\n");
 
     printf("Digite o primeiro numero: ");
 
-    if(scanf("%f", &num1) != 1)
+    if(scanf("%lf", &num1) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -275,7 +275,7 @@ void multiplicacao()
 
     printf("Digite o segundo numero: ");
 
-    if(scanf("%f", &num2) != 1)
+    if(scanf("%lf", &num2) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -285,13 +285,13 @@ void multiplicacao()
     }
   resultado = num1 * num2;
 
-    printf("\nResultado: %.2f\n", resultado);
+    printf("\nResultado: %.2lf\n", resultado);
 
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Multiplicacao: %.2f * %.2f = %.2f",
+        "Multiplicacao: %.2lf * %.2lf = %.2lf",
         num1,
         num2,
         resultado
@@ -303,15 +303,15 @@ void multiplicacao()
 
 void divisao()
 {
-    float num1;
-    float num2;
-    float resultado;
+    double num1;
+    double num2;
+    double resultado;
 
     printf("\n=== DIVISAO ===\n");
 
     printf("Digite o primeiro numero: ");
 
-    if(scanf("%f", &num1) != 1)
+    if(scanf("%lf", &num1) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -322,7 +322,7 @@ void divisao()
 
    printf("Digite o segundo numero: ");
 
-if(scanf("%f", &num2) != 1)
+if(scanf("%lf", &num2) != 1)
 {
     printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -338,13 +338,13 @@ if(num2 == 0)
 }
     resultado = num1 / num2;
 
-printf("\nResultado: %.2f\n", resultado);
+printf("\nResultado: %.2lf\n", resultado);
 
 if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Divisao: %.2f / %.2f = %.2f",
+        "Divisao: %.2lf / %.2lf = %.2lf",
         num1,
         num2,
         resultado
@@ -356,15 +356,15 @@ if(totalHistorico < 100)
 
 void potencia()
 {
-    float base;
-    float expoente;
-    float resultado;
+    double base;
+    double expoente;
+    double resultado;
 
     printf("\n=== POTENCIA ===\n");
 
     printf("Digite a base: ");
 
-    if(scanf("%f", &base) != 1)
+    if(scanf("%lf", &base) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -375,7 +375,7 @@ void potencia()
 
     printf("Digite o expoente: ");
 
-    if(scanf("%f", &expoente) != 1)
+    if(scanf("%lf", &expoente) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -386,12 +386,12 @@ void potencia()
 
     resultado = pow(base, expoente);
 
-    printf("\nResultado: %.2f\n", resultado);
+    printf("\nResultado: %.2lf\n", resultado);
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Potencia: %.2f ^ %.2f = %.2f",
+        "Potencia: %.2lf ^ %.2lf = %.2lf",
         base,
         expoente,
         resultado
@@ -403,14 +403,14 @@ void potencia()
 
 void raizQuadrada()
 {
-    float numero;
-    float resultado;
+    double numero;
+    double resultado;
 
     printf("\n=== RAIZ QUADRADA ===\n");
 
     printf("Digite um numero: ");
 
-    if(scanf("%f", &numero) != 1)
+    if(scanf("%lf", &numero) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -427,12 +427,12 @@ void raizQuadrada()
 
     resultado = sqrt(numero);
 
-    printf("\nResultado: %.2f\n", resultado);
+    printf("\nResultado: %.2lf\n", resultado);
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Raiz Quadrada: raiz(%.2f) = %.2f",
+        "Raiz Quadrada: raiz(%.2lf) = %.2lf",
         numero,
         resultado
     );
@@ -443,14 +443,14 @@ void raizQuadrada()
 
 void seno()
 {
-    float angulo;
-    float resultado;
+    double angulo;
+    double resultado;
 
     printf("\n=== SENO ===\n");
 
     printf("Digite o angulo em graus: ");
 
-    if(scanf("%f", &angulo) != 1)
+    if(scanf("%lf", &angulo) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -461,12 +461,12 @@ void seno()
 
     resultado = sin(angulo * M_PI / 180);
 
-    printf("\nResultado: %.4f\n", resultado);
+    printf("\nResultado: %.4lf\n", resultado);
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Seno: sen(%.2f) = %.4f",
+        "Seno: sen(%.2lf) = %.4lf",
         angulo,
         resultado
     );
@@ -477,14 +477,14 @@ void seno()
 
 void cosseno()
 {
-    float angulo;
-    float resultado;
+    double angulo;
+    double resultado;
 
     printf("\n=== COSSENO ===\n");
 
     printf("Digite o angulo em graus: ");
 
-    if(scanf("%f", &angulo) != 1)
+    if(scanf("%lf", &angulo) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -495,12 +495,12 @@ void cosseno()
 
     resultado = cos(angulo * M_PI / 180);
 
-    printf("\nResultado: %.4f\n", resultado);
+    printf("\nResultado: %.4lf\n", resultado);
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Cosseno: cos(%.2f) = %.4f",
+        "Cosseno: cos(%.2lf) = %.4lf",
         angulo,
         resultado
     );
@@ -511,14 +511,14 @@ void cosseno()
 
 void tangente()
 {
-    float angulo;
-    float resultado;
+    double angulo;
+    double resultado;
 
     printf("\n=== TANGENTE ===\n");
 
     printf("Digite o angulo em graus: ");
 
-    if(scanf("%f", &angulo) != 1)
+    if(scanf("%lf", &angulo) != 1)
     {
         printf("\nEntrada invalida! Digite apenas numeros.\n");
 
@@ -529,12 +529,12 @@ void tangente()
 
     resultado = tan(angulo * M_PI / 180);
 
-    printf("\nResultado: %.4f\n", resultado);
+    printf("\nResultado: %.4lf\n", resultado);
     if(totalHistorico < 100)
 {
     sprintf(
         historico[totalHistorico].descricao,
-        "Tangente: tan(%.2f) = %.4f",
+        "Tangente: tan(%.2lf) = %.4lf",
         angulo,
         resultado
     );
